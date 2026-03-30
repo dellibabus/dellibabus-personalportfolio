@@ -14,9 +14,9 @@ const CONTACT_INFO = [
   { icon: MapPin, label: 'Location', value: 'Tamil Nadu, India', href: null },
 ];
 
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID = 'service_5wabhbj';
+const EMAILJS_TEMPLATE_ID = 'template_e9gperq';
+const EMAILJS_PUBLIC_KEY = '083lUnBy0V-QrCkGf';
 
 export default function Contact() {
   const ref = useRef(null);

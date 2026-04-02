@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, ArrowUp, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/ui/SocialIcons";
 import { useThemeStore } from "../store/themeStore";
 
@@ -16,7 +16,7 @@ const SOCIALS = [
 export default function Footer() {
   const { isDark } = useThemeStore();
 
-  const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const year = new Date().getFullYear();
 
   return (
     <footer
@@ -56,7 +56,7 @@ export default function Footer() {
             }
             className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-green-500 text-black font-bold text-base hover:bg-green-400 transition-all duration-200 hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] cursor-pointer mb-10"
           >
-            Start a Project <ArrowUp size={16} />
+            Start a Project
           </motion.button>
         </div>
 
@@ -118,17 +118,8 @@ export default function Footer() {
           <p
             className={`text-sm ${isDark ? "text-[#9CA3AF]" : "text-gray-400"}`}
           >
-            © 2026 Delli Babu S. All Rights Reserved. Designed to impress.
+            © {year} Delli Babu S. All Rights Reserved.
           </p>
-          <button
-            onClick={scrollTop}
-            className={`
-              flex items-center gap-2 text-sm font-medium transition-all duration-200 cursor-pointer
-              ${isDark ? "text-[#9CA3AF] hover:text-green-400" : "text-gray-400 hover:text-green-600"}
-            `}
-          >
-            Back to top <ArrowUp size={14} />
-          </button>
         </div>
       </div>
     </footer>

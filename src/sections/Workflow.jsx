@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Rocket } from 'lucide-react';
 import SectionLabel from '../components/ui/SectionLabel';
 import { WORKFLOW_STEPS } from '../utils/data';
 import { useThemeStore } from '../store/themeStore';
@@ -105,7 +104,7 @@ export default function Workflow() {
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-green-500 text-black font-bold text-base hover:bg-green-400 transition-all duration-200 hover:shadow-[0_0_25px_rgba(34,197,94,0.5)] cursor-pointer"
           >
-            Start Now <Rocket size={16} />
+            Start Now
           </button>
         </motion.div>
       </div>

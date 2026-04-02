@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import emailjs from 'emailjs-com';
-import { Send, Mail, Phone, MapPin } from 'lucide-react';
+import {  Mail, Phone, MapPin } from 'lucide-react';
 import SectionLabel from '../components/ui/SectionLabel';
 import Input from '../components/ui/Input';
 import Button from '../components/ui/Button';
@@ -42,7 +42,7 @@ export default function Contact() {
         { from_name: form.name, from_email: form.email, message: form.message },
         EMAILJS_PUBLIC_KEY
       );
-      addToast('Message sent! I\'ll get back to you soon. 🚀', 'success');
+      addToast('Message sent! I\'ll get back to you soon.', 'success');
       setForm({ name: '', email: '', message: '' });
     } catch {
       addToast('Something went wrong. Please try again.', 'error');
@@ -116,20 +116,6 @@ export default function Contact() {
                 </div>
               </div>
             ))}
-
-            {/* Availability card */}
-            {/* <div className="p-5 rounded-2xl border border-green-500/30 bg-green-500/5">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-                </span>
-                <span className="text-sm font-semibold text-green-400">Currently Available</span>
-              </div>
-              <p className={`text-xs leading-relaxed ${isDark ? 'text-[#9CA3AF]' : 'text-gray-500'}`}>
-                Open to freelance projects, full-time opportunities, and exciting collaborations.
-              </p>
-            </div> */}
           </motion.div>
 
           {/* Form */}
@@ -175,7 +161,6 @@ export default function Contact() {
                   loading={loading}
                   className="self-end"
                 >
-                  <Send size={15} />
                   Send Message
                 </Button>
               </form>

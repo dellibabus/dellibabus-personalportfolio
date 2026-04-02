@@ -31,7 +31,7 @@ export default function About() {
       className={`py-24 ${isDark ? 'bg-[#0D110E]' : 'bg-white'}`}
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 items-center">
 
           {/* ── Image column ── */}
           <motion.div
@@ -50,47 +50,7 @@ export default function About() {
                 alt="Dellibabu S"
                 className="w-full h-full object-cover"
               />
-
-              {/* Bottom gradient overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-[#0B0F0C]/60 via-transparent to-transparent" />
-
-              {/* Availability badge */}
-              {/* <div className="absolute bottom-4 left-4 right-4">
-                <div className="glass rounded-2xl px-4 py-3 border border-green-500/20">
-                  <div className="flex items-center gap-2">
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-                    </span>
-                    <span className="text-sm text-green-400 font-semibold">Available for work</span>
-                  </div>
-                </div>
-              </div> */}
             </div>
-
-            {/* Floating stat — projects */}
-            {/* <motion.div
-              animate={{ y: [0, -6, 0] }}
-              transition={{ repeat: Infinity, duration: 3.5, ease: 'easeInOut' }}
-              className="absolute -right-4 top-16 hidden lg:block"
-            >
-              <div className={`px-4 py-3 rounded-2xl border shadow-xl ${isDark ? 'bg-[#111715] border-[#1F2A25]' : 'bg-white border-green-100 shadow-green-100/50'}`}>
-                <div className="text-2xl font-black text-green-400">10+</div>
-                <div className={`text-xs ${isDark ? 'text-[#9CA3AF]' : 'text-gray-500'}`}>Projects</div>
-              </div>
-            </motion.div> */}
-
-            {/* Floating stat — commits */}
-            {/* <motion.div
-              animate={{ y: [0, 6, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut', delay: 0.5 }}
-              className="absolute -right-4 bottom-24 hidden lg:block"
-            >
-              <div className={`px-4 py-3 rounded-2xl border shadow-xl ${isDark ? 'bg-[#111715] border-[#1F2A25]' : 'bg-white border-green-100 shadow-green-100/50'}`}>
-                <div className="text-2xl font-black text-green-400">1K+</div>
-                <div className={`text-xs ${isDark ? 'text-[#9CA3AF]' : 'text-gray-500'}`}>Commits</div>
-              </div>
-            </motion.div> */}
           </motion.div>
 
           {/* ── Content column ── */}
@@ -115,25 +75,8 @@ export default function About() {
               My work includes API integrations, microservice-based architectures, and cross-platform development with React Native. I handle deployments using cPanel, Vercel, Netlify, Firebase, and Docker, while exploring emerging technologies such as Web3 and AI/ML fundamentals.
             </p>
 
-            {/* Highlights */}
-            {/* <div className="flex flex-col gap-2 mb-8">
-              {HIGHLIGHTS.map(({ icon: Icon, text }) => (
-                <div key={text} className="flex items-center gap-3">
-                  <Icon size={15} className="text-green-400 shrink-0" />
-                  <span className={`text-sm ${isDark ? 'text-[#9CA3AF]' : 'text-gray-500'}`}>{text}</span>
-                </div>
-              ))}
-            </div> */}
-
-            {/* Tech badges */}
-            {/* <div className="flex flex-wrap gap-2 mb-10">
-              {TECH_HIGHLIGHTS.map((tech) => (
-                <Badge key={tech}>{tech}</Badge>
-              ))}
-            </div> */}
-
             <Button onClick={handleContact} variant="glow" size="lg">
-              Let&apos;s Talk 👋
+              Let&apos;s Talk
             </Button>
           </motion.div>
 
